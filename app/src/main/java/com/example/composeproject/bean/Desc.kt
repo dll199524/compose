@@ -1,0 +1,23 @@
+package com.example.composeproject.bean
+
+data class Desc(val curedCount: Int = 0,
+                val seriousCount: Int = 0,
+                val currentConfirmedIncr: Int = 0,
+                val midDangerCount: Int = 0,
+                val suspectedIncr: Int = 0,
+                val seriousIncr: Int = 0,
+                val confirmedIncr: Int = 0,
+                val globalStatistics: GlobalStatistics,
+                val deadIncr: Int = 0,
+                val suspectedCount: Int = 0,
+                val currentConfirmedCount: Int = 0,
+                val confirmedCount: Int = 0,
+                val modifyTime: Long = 0,
+                val createTime: Long = 0,
+                val curedIncr: Int = 0,
+                val yesterdaySuspectedCountIncr: Int = 0,
+                val foreignStatistics: ForeignStatistics,
+                val highDangerCount: Int = 0,
+                val id: Int = 0,
+                val deadCount: Int = 0,
+                val yesterdayConfirmedCountIncr: Int = 0)
