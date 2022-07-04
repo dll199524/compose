@@ -2,10 +2,13 @@ package com.example.composeproject.repository
 
 import com.example.composeproject.network.NetWorkRequest
 import com.example.composeproject.utils.Constant.CODE
+import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.Dispatchers
 import java.lang.RuntimeException
+import javax.inject.Inject
 
-class EpidemicNewsRepository : BaseRepository() {
+@ViewModelScoped
+class EpidemicNewsRepository @Inject constructor(): BaseRepository() {
 
     fun getEpidemicNews() = fire(Dispatchers.IO) {
         val epidemicNews = NetWorkRequest.getEpidemicNews()

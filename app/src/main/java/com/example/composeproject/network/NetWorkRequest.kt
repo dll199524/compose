@@ -18,14 +18,12 @@ object NetWorkRequest {
     private suspend fun <T> Call<T>.await() : T = suspendCoroutine {
         enqueue(object : Callback<T> {
             override fun onResponse(call: Call<T>, response: Response<T>) {
-                TODO("Not yet implemented")
                 val body = response.body()
                 if (body != null) it.resume(body)
                 else it.resumeWithException(RuntimeException("response is bull"))
             }
 
             override fun onFailure(call: Call<T>, t: Throwable) {
-                TODO("Not yet implemented")
                 it.resumeWithException(t)
             }
         })

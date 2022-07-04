@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ServiceCreator {
 
-    private const val baseUrl = "https://www.tianapi.com"
+    private const val baseUrl = "http://api.tianapi.com"
     private fun getRetrofit() : Retrofit =
         Retrofit.Builder()
             .baseUrl(baseUrl)
